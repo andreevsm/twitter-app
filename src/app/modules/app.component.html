@@ -1,6 +1,10 @@
 <app-header></app-header>
-<nav>
-    <a [routerLink]="['search-tweets']">search-tweets</a>
-    <a [routerLink]="['favourite-tweets']">favourite-tweets</a>
+
+<nav mat-tab-nav-bar>
+    <a mat-tab-link [routerLink]="['search-tweets']">SEARCH</a>
+    <a mat-tab-link [routerLink]="['favourite-tweets']">FAVOURITE</a>
 </nav>
+
+<button mat-fab><mat-icon>add</mat-icon></button>
+
 <router-outlet></router-outlet>

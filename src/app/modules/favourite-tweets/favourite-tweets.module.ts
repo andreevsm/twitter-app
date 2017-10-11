@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { FavouriteTweetsRoutingModule } from './favourite-tweets-routing.module';
 
 import { FavouriteTweetsComponent } from './favourite-tweets/favourite-tweets.component';
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    FavouriteTweetsRoutingModule
+    FavouriteTweetsRoutingModule,
+    SharedModule
   ],
   declarations: [FavouriteTweetsComponent]
 })

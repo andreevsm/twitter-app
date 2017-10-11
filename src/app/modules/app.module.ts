@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { SharedModule } from '../shared/shared.module';
 /**
  * components
  */
@@ -24,7 +25,8 @@ import { SearchTweetsModule } from './search-tweets/search-tweets.module';
     BrowserModule,
     AppRoutingModule,
     FavouriteTweetsModule,
-    SearchTweetsModule
+    SearchTweetsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
