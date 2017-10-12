@@ -1,3 +1,11 @@
 .wrapper {
     margin: 48px
 }
+
+mat-card-actions {
+    display: flex;
+}
+
+span {
+    padding: 5px
+}

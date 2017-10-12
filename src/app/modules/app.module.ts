@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { HttpModule } from '@angular/http';
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -15,6 +17,7 @@ import { HeaderComponent } from '../layouts/header/header.component';
  */
 import { FavouriteTweetsModule } from './favourite-tweets/favourite-tweets.module';
 import { SearchTweetsModule } from './search-tweets/search-tweets.module';
+import { TweetFactory } from '../models/tweet.model';
 
 @NgModule({
   declarations: [
@@ -26,9 +29,10 @@ import { SearchTweetsModule } from './search-tweets/search-tweets.module';
     AppRoutingModule,
     FavouriteTweetsModule,
     SearchTweetsModule,
-    SharedModule
+    SharedModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [TweetFactory],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
