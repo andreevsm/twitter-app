@@ -6,6 +6,7 @@ import { SearchTweetsRoutingModule } from './search-tweets-routing.module';
 import { SearchTweetsComponent } from './search-tweets/search-tweets.component';
 
 import { SharedModule } from '../../shared/shared.module';
+import { SearchComponent } from './search-tweets/search/search.component';
 
 @NgModule({
   imports: [
@@ -14,7 +15,11 @@ import { SharedModule } from '../../shared/shared.module';
     SharedModule
   ],
   declarations: [
-    SearchTweetsComponent
+    SearchTweetsComponent,
+    SearchComponent
+  ],
+  entryComponents: [
+    SearchComponent
   ]
 })
 

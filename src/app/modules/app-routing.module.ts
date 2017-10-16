@@ -6,7 +6,6 @@ import { SearchTweetsModule } from './search-tweets/search-tweets.module';
 
 const routes: Routes = [
   { path: '', redirectTo: 'search-tweets', pathMatch: 'full' },
-  // { path: 'search-tweets', component: SearchTweetsModule },
   { path: 'favourite-tweets', loadChildren: './favourite-tweets/favourite-tweets.module#FavouriteTweetsModule' }
 ];
 

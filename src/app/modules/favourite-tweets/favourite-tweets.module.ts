@@ -5,6 +5,7 @@ import { FavouriteTweetsRoutingModule } from './favourite-tweets-routing.module'
 
 import { FavouriteTweetsComponent } from './favourite-tweets/favourite-tweets.component';
 import { SharedModule } from '../../shared/shared.module';
+import { FavouriteComponent } from './favourite-tweets/favourite/favourite.component';
 
 @NgModule({
   imports: [
@@ -12,6 +13,7 @@ import { SharedModule } from '../../shared/shared.module';
     FavouriteTweetsRoutingModule,
     SharedModule
   ],
-  declarations: [FavouriteTweetsComponent]
+  declarations: [FavouriteTweetsComponent, FavouriteComponent],
+  entryComponents: [FavouriteComponent]
 })
 export class FavouriteTweetsModule { }

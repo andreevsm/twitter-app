@@ -11,25 +11,24 @@ import { TweetFactory, Tweet } from '../../../models/tweet.model';
 export class SearchTweetsComponent implements OnInit, OnDestroy {
 
   subscription: Subscription;
-  tweets: Tweet[];
-  like: boolean = false;
+  searchTweets: Tweet[];
 
   constructor(private _tweetFactory: TweetFactory) { }
 
   ngOnInit() {
-    this.getAllTweets();
+    this.getSearchTweets();
   }
 
-  private getAllTweets(): void {
-    this.subscription = this._tweetFactory.findAllTweets()
+  private getSearchTweets(): void {
+    this.subscription = this._tweetFactory.findAllSearchTweets()
       .subscribe(data => {
-        this.tweets = data;
-        console.log(this.tweets)
+        this.searchTweets = data;
       });
   }
 
-  private liked() {
-    this.like = !this.like
+  private updateTweet(event): void {
+    this._tweetFactory.addFavouriteTweet(event)
+    .subscribe(data => console.log(data));
   }
 
   ngOnDestroy() {
